@@ -292,11 +292,11 @@ export class TombFinance {
     }
     const rewardPerSecond = await poolContract.AsharePerSecond();
     if (depositTokenName === 'APEX-FTM-LP') {
-      return rewardPerSecond.mul(400).div(1000);
+      return rewardPerSecond.mul(60).div(1000);
     } else if (depositTokenName === 'ASHARE-FTM-LP'){
-      return rewardPerSecond.mul(100).div(1000);
+      return rewardPerSecond.mul(5).div(1000);
     } else if (depositTokenName === 'APEX'){
-      return rewardPerSecond.mul(500).div(1000);
+      return rewardPerSecond.mul(350).div(1000);
     }
   }
 
