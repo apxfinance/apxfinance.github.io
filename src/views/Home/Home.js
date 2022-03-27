@@ -215,7 +215,7 @@ const Home = () => {
                 <Typography style={{ fontSize: '14px'}}>Current Price</Typography>
                 <span style={{ fontSize: '20px', textAlign:'right', color: '#6f4df2', fontWeight: '800' }}>${tombPriceInDollars ? tombPriceInDollars : '..'}</span>
                 <span style={{ fontSize: '16px', alignContent: 'flex-start', marginLeft: '10px', fontWeight: '800' }}>
-                  {tombPriceInFTM ? tombPriceInFTM : '..'} FTM1
+                  {tombPriceInFTM ? tombPriceInFTM : '..'} FTM
                 </span>
               {/*  <Typography style={{ fontSize: '14px', textAlign: 'justify'}}>*/}
               {/*  Market Cap: ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />*/}
