@@ -29,6 +29,8 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AccountButton from './AccountButton';
 import DiscordImage from "../../assets/img/discord.svg";
 import ApexPurpleSmall from "../../assets/img/apexpurplesmall.gif";
+import ApexLogo from "../../assets/img/apex3.png";
+
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -105,10 +107,10 @@ const Nav = () => {
           <>
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle} style={{display: 'flex', alignItems: 'center'}}>
               {/* <a className={ classes.brandLink } href="/">Apex Finance</a> */}
-              <Image style={{ width: '60px',height: '60px', paddingTop: '0px' }} src={ApexPurpleSmall} />
-              <Typography style={{color:'#fff', fontSize: '20px', marginLeft: '20px' }} >
-                APEX
-              </Typography>
+              <Image style={{ width: '120px',height: '30px', paddingTop: '0px', background: '#1d1931' }} src={ApexLogo} />
+              {/*<Typography style={{color:'#fff', fontSize: '20px', marginLeft: '20px' }} >*/}
+              {/*  APEX*/}
+              {/*</Typography>*/}
             </Typography>
             <Box mr={5}>
               <Link color="textPrimary" to="/" className={classes.link}>
@@ -165,10 +167,10 @@ const Nav = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Image color="none" style={{ width: '40px',height: '40px', paddingTop: '0px' }} src={CashImage} />
-            <Link to="/" style={{color:'#fff !important', fontSize: '20px',}} className={classes.brandLink}>
-              APEX
-            </Link>
+            <Image style={{ width: '108px',height: '27px', paddingTop: '0px', background: '#1d1931' }} src={ApexLogo} />
+            {/*<Link to="/" style={{color:'#fff !important', fontSize: '20px',}} className={classes.brandLink}>*/}
+            {/*  APEX*/}
+            {/*</Link>*/}
 
             <Drawer
               className={classes.drawer}
@@ -189,7 +191,7 @@ const Nav = () => {
               <Divider />
               <List>
                 <ListItemLink primary="Home" to="/" />
-                <ListItemLink primary="Statistics" to="/staking" />
+                <ListItemLink primary="Statistics" to="/statistics" />
                 <ListItemLink primary="Staking" to="/staking" />
                 <ListItemLink primary="Board Room" to="/boardroom" />
                 <ListItemLink primary="Bonds" to="/bonds" />
