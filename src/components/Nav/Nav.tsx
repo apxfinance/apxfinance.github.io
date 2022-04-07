@@ -106,21 +106,21 @@ const Nav = () => {
         {matches ? (
           <>
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle} style={{display: 'flex', alignItems: 'center'}}>
-              {/* <a className={ classes.brandLink } href="/">Apex Finance</a> */}
+              <Link color="textPrimary" to="/">
               <Image style={{ width: '120px',height: '30px', paddingTop: '0px', background: '#1d1931' }} src={ApexLogo} />
-              {/*<Typography style={{color:'#fff', fontSize: '20px', marginLeft: '20px' }} >*/}
+              </Link>
               {/*  APEX*/}
               {/*</Typography>*/}
             </Typography>
             <Box mr={5}>
-              <Link color="textPrimary" to="/" className={classes.link}>
-                Home
-              </Link>
-              <Link color="textPrimary" to="/statistics" className={classes.link}>
-                Statistics
-              </Link>
               <Link color="textPrimary" to="/staking" className={classes.link}>
                 Staking
+              </Link>
+              <a href="https://compound.apx.finance" target="_blank" color="textPrimary" className={classes.link}>
+                Autocompounder
+              </a>
+              <Link color="textPrimary" to="/statistics" className={classes.link}>
+                Statistics
               </Link>
               <Link color="textPrimary" to="/boardroom" className={classes.link}>
                 Board Room
@@ -131,12 +131,10 @@ const Nav = () => {
               <Link color="textPrimary" to="/about" className={classes.link}>
                 About
               </Link>
-              <Link color="textPrimary" to="/Roadmap" className={classes.link}>
-                Roadmap
-              </Link>
-              <Link color="textPrimary" to="/audits" className={classes.link}>
-                Audits
-              </Link>
+              {/*<Link color="textPrimary" to="/Roadmap" className={classes.link}>*/}
+              {/*  Roadmap*/}
+              {/*</Link>*/}
+
               <Link color="textPrimary" to="/faq" className={classes.link}>
                 FAQ
               </Link>
