@@ -94,7 +94,7 @@ export class TombFinance {
   //===================================================================
 
   async getTombStat(): Promise<TokenStat> {
-    const { ApexFtmRewardPool, ApexFtmLPApexRewardPool, ApexFtmLPApexRewardPoolOld } = this.contracts;
+    const { ApexFtmRewardPool, ApexAshareLPAShareRewardPool, ApexFtmLPApexRewardPool, ApexFtmLPApexRewardPoolOld } = this.contracts;
     const supply = await this.APEX.totalSupply();
     const tombRewardPoolSupply = await this.APEX.balanceOf(ApexFtmRewardPool.address);
     const tombRewardPoolSupply2 = await this.APEX.balanceOf(ApexFtmLPApexRewardPool.address);
@@ -178,6 +178,7 @@ export class TombFinance {
    */
   async getShareStat(): Promise<TokenStat> {
     const { ApexFtmLPAShareRewardPool } = this.contracts;
+    const { ApexAshareLPAShareRewardPool } = this.contracts;
 
     const supply = await this.ASHARE.totalSupply();
 
@@ -295,6 +296,8 @@ export class TombFinance {
       return rewardPerSecond.mul(250).div(1000);
     } else if (depositTokenName === 'ASHARE-FTM-LP'){
       return rewardPerSecond.mul(220).div(1000);
+    } else if (depositTokenName === 'APEX-ASHARE-LP'){
+      return rewardPerSecond.mul(220).div(1000);
     } else if (depositTokenName === 'APEX'){
       return rewardPerSecond.mul(600).div(1000);
     }
@@ -317,6 +320,8 @@ export class TombFinance {
       if (tokenName === 'APEX-FTM-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.APEX, true);
       } else if (tokenName === 'ASHARE-FTM-LP') {
+        tokenPrice = await this.getLPTokenPrice(token, this.ASHARE, false);
+      } else if (tokenName === 'APEX-ASHARE-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.ASHARE, false);
       } else if (tokenName === 'SHIBA') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);

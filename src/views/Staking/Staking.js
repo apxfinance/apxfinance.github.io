@@ -40,7 +40,7 @@ const Staking = () => {
               </Typography>
               <Typography style={{color:'#fff !important', fontSize: '14px',paddingLeft: '15px'}}>Welcome to the Apex staking page. Please find a pool below.</Typography>
               <Box mt={2}>
-              <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 3).length === 0}>
+              <div>
                 <Grid container>
                   {activeBanks
                       .filter((bank) => bank.sectionInUI === 2)
@@ -50,15 +50,6 @@ const Staking = () => {
                           </React.Fragment>
                       ))}
                 </Grid>
-                  <Grid container spacing={30}>
-                    {activeBanks
-                      .filter((bank) => bank.sectionInUI === 3)
-                      .map((bank) => (
-                        <React.Fragment key={bank.name}>
-                          <StakeCard bank={bank} />
-                        </React.Fragment>
-                      ))}
-                  </Grid>
               </div>
 
               </Box>

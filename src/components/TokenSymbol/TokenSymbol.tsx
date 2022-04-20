@@ -7,6 +7,7 @@ import tombLogoPNG from '../../assets/img/crypto_tomb_cash.png';
 import tShareLogoPNG from '../../assets/img/crypto_tomb_share.png';
 import tBondLogo from '../../assets/img/abonds_c.png';
 import aUsdLogo from '../../assets/img/ausd_c.png';
+import apexAshareLpLogo from '../../assets/img/apex_ashare_lp.png';
 
 import tombFtmLpLogo from '../../assets/img/tomb_ftm_lp.png';
 import tshareFtmLpLogo from '../../assets/img/tshare_ftm_lp.png';
@@ -30,6 +31,7 @@ const logosBySymbol: { [title: string]: string } = {
   ZOO: zooLogo,
   'APEX-FTM-LP': tombFtmLpLogo,
   'ASHARE-FTM-LP': tshareFtmLpLogo,
+  'APEX-ASHARE-LP': apexAshareLpLogo,
 };
 
 type LogoProps = {
