@@ -94,7 +94,7 @@ export class TombFinance {
   //===================================================================
 
   async getTombStat(): Promise<TokenStat> {
-    const { ApexFtmRewardPool, ApexAshareLPAShareRewardPool, ApexFtmLPApexRewardPool, ApexFtmLPApexRewardPoolOld } = this.contracts;
+    const { ApexFtmRewardPool, ApexFtmLPApexRewardPool, ApexFtmLPApexRewardPoolOld } = this.contracts;
     const supply = await this.APEX.totalSupply();
     const tombRewardPoolSupply = await this.APEX.balanceOf(ApexFtmRewardPool.address);
     const tombRewardPoolSupply2 = await this.APEX.balanceOf(ApexFtmLPApexRewardPool.address);
@@ -178,10 +178,7 @@ export class TombFinance {
    */
   async getShareStat(): Promise<TokenStat> {
     const { ApexFtmLPAShareRewardPool } = this.contracts;
-    const { ApexAshareLPAShareRewardPool } = this.contracts;
-
     const supply = await this.ASHARE.totalSupply();
-
     const priceInFTM = await this.getTokenPriceFromPancakeswap(this.ASHARE);
     const tombRewardPoolSupply = await this.ASHARE.balanceOf(ApexFtmLPAShareRewardPool.address);
     const tShareCirculatingSupply = supply.sub(tombRewardPoolSupply);
