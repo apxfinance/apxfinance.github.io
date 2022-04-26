@@ -296,7 +296,7 @@ export class TombFinance {
     } else if (depositTokenName === 'APEX-ASHARE-LP'){
       return rewardPerSecond.mul(400).div(1000);
     } else if (depositTokenName === 'APEX'){
-      return rewardPerSecond.mul(200).div(1000);
+      return rewardPerSecond.mul(201).div(1000);
     }
   }
 
